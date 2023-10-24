@@ -1,11 +1,11 @@
-import { cdk8s } from "projen";
+import { cdk8s, TextFile } from "projen";
 const project = new cdk8s.ConstructLibraryCdk8s({
   author: "Vincent De Smet",
   authorAddress: "vincent@goodnotesapp.com",
   cdk8sVersion: "2.67.2",
   defaultReleaseBranch: "main",
   jsiiVersion: "~5.0.0",
-  name: "cdk8s-datadog",
+  name: "@vincentgna/cdk8s-datadog",
   projenrcTs: true,
   repositoryUrl: "https://github.com/vincent/cdk8s-datadog.git",
   prettier: true,
@@ -22,5 +22,8 @@ project.addTask("update-src", {
   exec: "bash ./projenrc/tasks/update-src.sh",
   description: "Convert CRDs to CDK8s generated Typescript interfaces",
   receiveArgs: true,
+});
+new TextFile(project, ".nvmrc", {
+  lines: ["v18"],
 });
 project.synth();

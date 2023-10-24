@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-datadog",
+  "name": "@vincentgna/cdk8s-datadog",
   "repository": {
     "type": "git",
     "url": "https://github.com/vincent/cdk8s-datadog.git"

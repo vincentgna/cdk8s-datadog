@@ -54,3 +54,4 @@ junit.xml
 tsconfig.json
 !/API.md
 versions/**
+!/.nvmrc
