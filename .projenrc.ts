@@ -9,5 +9,15 @@ const project = new cdk8s.ConstructLibraryCdk8s({
   projenrcTs: true,
   repositoryUrl: "https://github.com/vincent/cdk8s-datadog.git",
   prettier: true,
+  sampleCode: false,
+});
+if (project.prettier?.ignoreFile) {
+  project.prettier.ignoreFile.addPatterns("src/datadoghq.com.ts");
+}
+project.gitignore.exclude("versions/**");
+project.addTask("update-src", {
+  exec: "bash ./projenrc/tasks/update-src.sh",
+  description: "Convert CRDs to CDK8s generated Typescript interfaces",
+  receiveArgs: true,
 });
 project.synth();

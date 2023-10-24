@@ -254,6 +254,16 @@
         }
       ]
     },
+    "update-src": {
+      "name": "update-src",
+      "description": "Convert CRDs to CDK8s generated Typescript interfaces",
+      "steps": [
+        {
+          "exec": "bash ./projenrc/tasks/update-src.sh",
+          "receiveArgs": true
+        }
+      ]
+    },
     "upgrade": {
       "name": "upgrade",
       "description": "upgrade dependencies",

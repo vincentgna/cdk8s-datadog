@@ -1,5 +1,3 @@
-export class Hello {
-  public sayHello() {
-    return "hello, GoodNotes!";
-  }
-}
+// Version: 1.2.1
+
+export * from "./datadoghq.com";
