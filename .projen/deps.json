@@ -1,6 +1,18 @@
 {
   "dependencies": [
     {
+      "name": "@jsii/spec",
+      "type": "build"
+    },
+    {
+      "name": "@mrgrain/jsii-struct-builder",
+      "type": "build"
+    },
+    {
+      "name": "@types/fs-extra",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -17,6 +29,10 @@
     {
       "name": "@typescript-eslint/parser",
       "version": "^6",
+      "type": "build"
+    },
+    {
+      "name": "cdk8s-cli",
       "type": "build"
     },
     {
@@ -45,6 +61,10 @@
       "type": "build"
     },
     {
+      "name": "fs-extra",
+      "type": "build"
+    },
+    {
       "name": "jest",
       "type": "build"
     },
@@ -68,6 +88,10 @@
     {
       "name": "jsii-rosetta",
       "version": "~5.0.0",
+      "type": "build"
+    },
+    {
+      "name": "jsii-srcmak",
       "type": "build"
     },
     {

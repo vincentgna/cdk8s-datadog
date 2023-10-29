@@ -53,5 +53,8 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
-versions/**
 !/.nvmrc
+!src/datadog-operator/.jsii
+!/src/util/Types.generated.ts
+!/src/util/index.ts
+!/src/util/DatadogMonitorProps.generated.ts
