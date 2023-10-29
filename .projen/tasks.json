@@ -130,6 +130,16 @@
         }
       ]
     },
+    "import-crds": {
+      "name": "import-crds",
+      "description": "Import CRDs from GitHub repo using doc.crds.dev and keep .jsii declaration for imported code.",
+      "steps": [
+        {
+          "exec": "ts-node projenrc/tasks/import-crds.ts",
+          "receiveArgs": true
+        }
+      ]
+    },
     "install": {
       "name": "install",
       "description": "Install project dependencies and update lockfile (non-frozen)",
@@ -254,16 +264,6 @@
         }
       ]
     },
-    "update-src": {
-      "name": "update-src",
-      "description": "Convert CRDs to CDK8s generated Typescript interfaces",
-      "steps": [
-        {
-          "exec": "bash ./projenrc/tasks/update-src.sh",
-          "receiveArgs": true
-        }
-      ]
-    },
     "upgrade": {
       "name": "upgrade",
       "description": "upgrade dependencies",
@@ -275,13 +275,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest,jest-junit,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,prettier,projen,standard-version,ts-jest,ts-node,typescript,cdk8s,constructs"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@jsii/spec,@mrgrain/jsii-struct-builder,@types/fs-extra,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s-cli,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,fs-extra,jest,jest-junit,jsii-diff,jsii-docgen,jsii-pacmak,jsii-srcmak,npm-check-updates,prettier,projen,standard-version,ts-jest,ts-node,typescript,cdk8s,constructs"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest jest-junit jsii-diff jsii-docgen jsii-pacmak npm-check-updates prettier projen standard-version ts-jest ts-node typescript cdk8s constructs"
+          "exec": "yarn upgrade @jsii/spec @mrgrain/jsii-struct-builder @types/fs-extra @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser cdk8s-cli eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint fs-extra jest jest-junit jsii-diff jsii-docgen jsii-pacmak jsii-srcmak npm-check-updates prettier projen standard-version ts-jest ts-node typescript cdk8s constructs"
         },
         {
           "exec": "npx projen"

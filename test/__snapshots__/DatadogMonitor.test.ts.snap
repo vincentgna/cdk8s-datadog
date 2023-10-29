@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatadogMonitor props are strongly typed 1`] = `
+[
+  {
+    "apiVersion": "datadoghq.com/v1alpha1",
+    "kind": "DatadogMonitor",
+    "metadata": {
+      "name": "test-foo-c8c19855",
+    },
+    "spec": {
+      "message": "CPU Usage over 80 for the last 5min, review Autoscaling triggers",
+      "name": "[CDK8s] podinfo pod cpu utilisation is too high",
+      "query": "avg(last_5m):sum:docker.cpu.usage{kube_deployment:chart-foo-deploy} > 80",
+      "type": "metric alert",
+    },
+  },
+  {
+    "apiVersion": "datadoghq.com/v1alpha1",
+    "kind": "DatadogMonitor",
+    "metadata": {
+      "name": "bar",
+    },
+    "spec": {
+      "message": "CPU Usage over 80 for the last 5min, review Autoscaling triggers",
+      "name": "[CDK8s] podinfo pod cpu utilisation is too high",
+      "query": "avg(last_5m):sum:docker.cpu.usage{kube_deployment:chart-foo-deploy} > 80",
+      "type": "metric alert",
+    },
+  },
+]
+`;
